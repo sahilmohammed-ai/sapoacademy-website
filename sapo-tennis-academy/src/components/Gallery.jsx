@@ -85,7 +85,7 @@ export default function Gallery() {
   }
 
   return (
-    <section id="gallery" className="py-20 lg:py-36 bg-sapo-dark">
+    <section id="gallery" className="py-20 lg:py-36 bg-sapo-dark overflow-hidden relative z-10">
       <div className="gold-divider mb-12 lg:mb-24" />
 
       {/* Header */}

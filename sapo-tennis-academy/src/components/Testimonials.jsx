@@ -69,7 +69,7 @@ export default function Testimonials() {
   }, [])
 
   return (
-    <section className="py-20 lg:py-36 px-4 sm:px-6 bg-sapo-green/10 relative overflow-hidden">
+    <section className="py-20 lg:py-36 px-4 sm:px-6 bg-sapo-green/10 relative overflow-hidden z-20">
       {/* Background image */}
       <div className="absolute inset-0 opacity-5">
         <img
