@@ -40,7 +40,7 @@ export default function Testimonials() {
   }, [])
 
   return (
-    <section className="py-28 lg:py-36 px-6 bg-sapo-green/10 relative overflow-hidden">
+    <section className="py-20 lg:py-36 px-4 sm:px-6 bg-sapo-green/10 relative overflow-hidden">
       {/* Background image */}
       <div className="absolute inset-0 opacity-5">
         <img
@@ -68,7 +68,7 @@ export default function Testimonials() {
           </motion.div>
           <motion.h2
             variants={staggerItem}
-            className="font-display text-5xl md:text-6xl font-black text-sapo-cream leading-tight"
+            className="font-display text-4xl md:text-6xl font-black text-sapo-cream leading-tight"
           >
             What Our
             <br />
@@ -77,7 +77,7 @@ export default function Testimonials() {
         </motion.div>
 
         {/* Cards — horizontal scroll on mobile */}
-        <div className="flex gap-6 overflow-x-auto md:overflow-visible md:grid md:grid-cols-3 pb-4 md:pb-0 snap-x snap-mandatory md:snap-none">
+        <div className="flex flex-col md:flex-row gap-6 md:overflow-visible md:grid md:grid-cols-3 pb-4 md:pb-0">
           {testimonials.map((t, i) => (
             <motion.div
               key={t.id}
@@ -86,7 +86,7 @@ export default function Testimonials() {
               transition={{ duration: 0.6, delay: i * 0.15, ease: [0.25, 0.1, 0.25, 1] }}
               viewport={{ once: true }}
               whileHover={{ y: -4 }}
-              className="flex-shrink-0 w-[85vw] md:w-auto snap-center bg-sapo-dark/80 border border-sapo-cream/10 hover:border-sapo-gold/30 p-8 flex flex-col transition-all duration-300"
+              className="w-full md:w-auto bg-sapo-dark/80 border border-sapo-cream/10 hover:border-sapo-gold/30 p-6 sm:p-8 flex flex-col transition-all duration-300"
               style={{ backdropFilter: 'blur(8px)' }}
             >
               {/* Stars */}

@@ -13,7 +13,7 @@ export default {
         'sapo-dark': '#0f1f17',
       },
       fontFamily: {
-        display: ['"Playfair Display"', 'Georgia', 'serif'],
+        display: ['"Roboto Slab"', 'Georgia', 'serif'],
         sans: ['"DM Sans"', 'system-ui', 'sans-serif'],
       },
     },

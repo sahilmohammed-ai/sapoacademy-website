@@ -11,10 +11,10 @@ export default function About() {
   const { ref, controls } = useScrollAnimation(0.1)
 
   return (
-    <section id="about" className="py-28 lg:py-36 px-6 bg-sapo-dark overflow-hidden">
+    <section id="about" className="py-20 lg:py-36 px-4 sm:px-6 bg-sapo-dark overflow-hidden">
       <div className="gold-divider mb-24" />
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center">
 
           {/* Left: Image block */}
           <motion.div
@@ -40,7 +40,7 @@ export default function About() {
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.7, delay: 0.4 }}
               viewport={{ once: true }}
-              className="absolute -bottom-8 -right-6 w-48 md:w-56 border-4 border-sapo-dark shadow-2xl"
+              className="absolute -bottom-6 right-2 sm:-right-6 w-36 sm:w-48 md:w-56 border-4 border-sapo-dark shadow-2xl"
             >
               <img
                 src="/images/group-team.jpg"
@@ -50,7 +50,7 @@ export default function About() {
             </motion.div>
 
             {/* Gold accent line */}
-            <div className="absolute -left-4 top-12 w-0.5 h-32 bg-sapo-gold/60" />
+            <div className="absolute left-0 sm:-left-4 top-12 w-0.5 h-32 bg-sapo-gold/60" />
           </motion.div>
 
           {/* Right: Text */}
@@ -80,7 +80,7 @@ export default function About() {
             {/* Heading */}
             <motion.h2
               variants={staggerItem}
-              className="font-display text-4xl md:text-5xl lg:text-6xl font-black text-sapo-cream leading-tight mb-6"
+              className="font-display text-3xl md:text-5xl lg:text-6xl font-black text-sapo-cream leading-tight mb-6"
             >
               Developing Players,
               <br />

@@ -46,7 +46,7 @@ export default function Contact() {
   const { ref, controls } = useScrollAnimation(0.1)
 
   return (
-    <section id="contact" className="relative py-28 lg:py-36 overflow-hidden">
+    <section id="contact" className="relative py-20 lg:py-36 overflow-hidden">
       {/* Background court image with overlay */}
       <div className="absolute inset-0">
         <img
@@ -58,7 +58,7 @@ export default function Contact() {
         <div className="absolute inset-0 bg-gradient-to-b from-sapo-dark/60 via-transparent to-sapo-dark/60" />
       </div>
 
-      <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
+      <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 text-center">
 
         {/* Header */}
         <motion.div
@@ -77,7 +77,7 @@ export default function Contact() {
           </motion.div>
           <motion.h2
             variants={staggerItem}
-            className="font-display text-5xl md:text-6xl lg:text-7xl font-black text-sapo-cream leading-tight mb-6"
+            className="font-display text-4xl md:text-6xl lg:text-7xl font-black text-sapo-cream leading-tight mb-6"
           >
             Ready to
             <br />
@@ -107,7 +107,7 @@ export default function Contact() {
               rel={item.external ? 'noopener noreferrer' : undefined}
               whileHover={{ y: -4 }}
               transition={{ duration: 0.25 }}
-              className="group flex flex-col items-center text-center p-8 border border-sapo-cream/10 bg-sapo-dark/60 hover:border-sapo-gold/50 hover:bg-sapo-dark/80 backdrop-blur-sm transition-all duration-300"
+              className="group flex flex-col items-center text-center p-6 sm:p-8 min-h-[44px] border border-sapo-cream/10 bg-sapo-dark/60 hover:border-sapo-gold/50 hover:bg-sapo-dark/80 backdrop-blur-sm transition-all duration-300"
             >
               <div className="text-sapo-gold mb-4 group-hover:scale-110 transition-transform duration-300">
                 {item.icon}
@@ -135,7 +135,7 @@ export default function Contact() {
         >
           <a
             href="tel:8323390545"
-            className="inline-flex items-center gap-3 px-10 py-4 bg-sapo-gold text-sapo-dark font-sans font-semibold text-sm tracking-widest uppercase hover:bg-sapo-cream transition-all duration-300 group"
+            className="inline-flex items-center justify-center gap-3 w-full sm:w-auto px-10 py-4 min-h-[44px] bg-sapo-gold text-sapo-dark font-sans font-semibold text-sm tracking-widest uppercase hover:bg-sapo-cream transition-all duration-300 group"
           >
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />

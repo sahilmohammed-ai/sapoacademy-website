@@ -58,7 +58,7 @@ export default function Hero() {
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,_#1a3a2a55_0%,_transparent_60%)]" />
 
       {/* Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-12 pt-20">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 pt-20">
         {/* Eyebrow */}
         <motion.div
           initial={{ opacity: 0, x: -20 }}
@@ -82,7 +82,7 @@ export default function Hero() {
           <div className="overflow-hidden">
             <motion.h1
               variants={wordVariant}
-              className="font-display text-[clamp(4rem,12vw,9rem)] font-black leading-[0.9] tracking-tight text-sapo-cream"
+              className="font-display text-[clamp(2.8rem,10vw,9rem)] font-black leading-[0.9] tracking-tight text-sapo-cream"
             >
               TRAIN LIKE
             </motion.h1>
@@ -90,7 +90,7 @@ export default function Hero() {
           <div className="overflow-hidden">
             <motion.h1
               variants={wordVariant}
-              className="font-display text-[clamp(4rem,12vw,9rem)] font-black leading-[0.9] tracking-tight text-gradient-gold"
+              className="font-display text-[clamp(2.8rem,10vw,9rem)] font-black leading-[0.9] tracking-tight text-gradient-gold"
             >
               A CHAMPION
             </motion.h1>
@@ -114,11 +114,11 @@ export default function Hero() {
           variants={fadeIn}
           initial="hidden"
           animate="visible"
-          className="flex flex-col sm:flex-row gap-4"
+          className="flex flex-col sm:flex-row gap-4 sm:w-auto"
         >
           <a
             href="#programs"
-            className="inline-flex items-center justify-center px-8 py-4 bg-sapo-gold text-sapo-dark font-sans font-semibold text-sm tracking-widest uppercase hover:bg-sapo-cream transition-all duration-300 group"
+            className="inline-flex items-center justify-center px-8 py-4 min-h-[44px] w-full sm:w-auto bg-sapo-gold text-sapo-dark font-sans font-semibold text-sm tracking-widest uppercase hover:bg-sapo-cream transition-all duration-300 group"
           >
             Explore Programs
             <svg className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -127,7 +127,7 @@ export default function Hero() {
           </a>
           <a
             href="#about"
-            className="inline-flex items-center justify-center px-8 py-4 border border-sapo-cream/40 text-sapo-cream font-sans font-medium text-sm tracking-widest uppercase hover:border-sapo-cream hover:bg-sapo-cream/10 transition-all duration-300"
+            className="inline-flex items-center justify-center px-8 py-4 min-h-[44px] w-full sm:w-auto border border-sapo-cream/40 text-sapo-cream font-sans font-medium text-sm tracking-widest uppercase hover:border-sapo-cream hover:bg-sapo-cream/10 transition-all duration-300"
           >
             Meet the Coach
           </a>

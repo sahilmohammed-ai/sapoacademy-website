@@ -86,7 +86,7 @@ export default function Gallery() {
   }
 
   return (
-    <section id="gallery" className="py-28 lg:py-36 bg-sapo-dark">
+    <section id="gallery" className="py-20 lg:py-36 bg-sapo-dark">
       <div className="gold-divider mb-24" />
 
       {/* Header */}
@@ -95,7 +95,7 @@ export default function Gallery() {
         variants={containerVariants}
         initial="hidden"
         animate={controls}
-        className="px-6 max-w-7xl mx-auto mb-14"
+        className="px-4 sm:px-6 max-w-7xl mx-auto mb-14"
       >
         <motion.div variants={staggerItem} className="flex items-center gap-3 mb-4">
           <div className="w-8 h-px bg-sapo-gold" />
@@ -105,7 +105,7 @@ export default function Gallery() {
         </motion.div>
         <motion.h2
           variants={staggerItem}
-          className="font-display text-5xl md:text-6xl font-black text-sapo-cream leading-tight"
+          className="font-display text-4xl md:text-6xl font-black text-sapo-cream leading-tight"
         >
           Life at
           <br />
@@ -114,7 +114,7 @@ export default function Gallery() {
       </motion.div>
 
       {/* Masonry collage */}
-      <div className="px-6 max-w-7xl mx-auto">
+      <div className="px-4 sm:px-6 max-w-7xl mx-auto">
         <div
           className="columns-2 sm:columns-3 lg:columns-4 gap-3"
         >
@@ -137,7 +137,7 @@ export default function Gallery() {
       </div>
 
       {/* Instagram CTA */}
-      <div className="px-6 max-w-7xl mx-auto mt-12 flex items-center gap-4">
+      <div className="px-4 sm:px-6 max-w-7xl mx-auto mt-12 flex items-center gap-4">
         <div className="w-8 h-px bg-sapo-gold/40" />
         <a
           href="https://www.instagram.com/sapoacademy"
@@ -167,7 +167,7 @@ export default function Gallery() {
           >
             <button
               onClick={close}
-              className="absolute top-5 right-5 w-10 h-10 border border-sapo-cream/20 flex items-center justify-center text-sapo-cream/60 hover:text-sapo-cream hover:border-sapo-cream/40 transition-all duration-200"
+              className="absolute top-5 right-5 w-11 h-11 border border-sapo-cream/20 flex items-center justify-center text-sapo-cream/60 hover:text-sapo-cream hover:border-sapo-cream/40 transition-all duration-200"
             >
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M6 18L18 6M6 6l12 12" />
@@ -176,7 +176,7 @@ export default function Gallery() {
 
             <button
               onClick={(e) => { e.stopPropagation(); nav(-1) }}
-              className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 border border-sapo-cream/20 flex items-center justify-center text-sapo-cream/60 hover:text-sapo-cream hover:border-sapo-cream/40 transition-all duration-200"
+              className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 w-11 h-11 border border-sapo-cream/20 flex items-center justify-center text-sapo-cream/60 hover:text-sapo-cream hover:border-sapo-cream/40 transition-all duration-200"
             >
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 19l-7-7 7-7" />
@@ -209,7 +209,7 @@ export default function Gallery() {
 
             <button
               onClick={(e) => { e.stopPropagation(); nav(1) }}
-              className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 border border-sapo-cream/20 flex items-center justify-center text-sapo-cream/60 hover:text-sapo-cream hover:border-sapo-cream/40 transition-all duration-200"
+              className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 w-11 h-11 border border-sapo-cream/20 flex items-center justify-center text-sapo-cream/60 hover:text-sapo-cream hover:border-sapo-cream/40 transition-all duration-200"
             >
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5l7 7-7 7" />

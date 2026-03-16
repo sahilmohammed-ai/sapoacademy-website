@@ -10,13 +10,13 @@ const navLinks = [
 
 export default function Footer() {
   return (
-    <footer className="bg-sapo-dark border-t border-sapo-gold/15 pt-16 pb-8 px-6">
+    <footer className="bg-sapo-dark border-t border-sapo-gold/15 pt-16 pb-8 px-4 sm:px-6">
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16 text-center md:text-left">
 
           {/* Logo + tagline */}
           <div className="md:col-span-1">
-            <a href="#home" className="flex flex-col leading-none mb-4">
+            <a href="#home" className="flex flex-col leading-none mb-4 items-center md:items-start">
               <span className="font-display text-3xl font-black text-sapo-cream tracking-wider">
                 SAPO
               </span>
@@ -53,7 +53,7 @@ export default function Footer() {
             <p className="text-sapo-gold text-xs tracking-[0.25em] uppercase font-sans font-semibold mb-5">
               Follow Along
             </p>
-            <div className="flex gap-4 mb-8">
+            <div className="flex gap-4 mb-8 justify-center md:justify-start">
               {/* Instagram */}
               <a
                 href="https://www.instagram.com/sapoacademy"
@@ -72,7 +72,7 @@ export default function Footer() {
 
             <a
               href="#contact"
-              className="inline-flex items-center px-6 py-3 border border-sapo-gold text-sapo-gold font-sans text-sm font-medium tracking-widest uppercase hover:bg-sapo-gold hover:text-sapo-dark transition-all duration-300"
+              className="inline-flex items-center justify-center px-6 py-3 min-h-[44px] border border-sapo-gold text-sapo-gold font-sans text-sm font-medium tracking-widest uppercase hover:bg-sapo-gold hover:text-sapo-dark transition-all duration-300"
             >
               Book a Session
             </a>
@@ -83,7 +83,7 @@ export default function Footer() {
         <div className="gold-divider mb-8" />
 
         {/* Bottom bar */}
-        <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-center">
           <p className="text-sapo-cream/30 text-xs font-sans">
             © 2025 Sapo Tennis Academy. All rights reserved.
           </p>

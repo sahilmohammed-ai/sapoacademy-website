@@ -46,7 +46,7 @@ export default function Stats() {
   return (
     <section ref={ref} className="relative py-0">
       <div className="w-full border-t border-sapo-gold/25" />
-      <div className="bg-sapo-green py-14 px-6">
+      <div className="bg-sapo-green py-14 px-4 sm:px-6">
         <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-10 md:gap-0">
           {stats.map((stat, i) => (
             <motion.div
@@ -56,7 +56,7 @@ export default function Stats() {
               transition={{ duration: 0.6, delay: i * 0.12, ease: [0.25, 0.1, 0.25, 1] }}
               className="flex flex-col items-center text-center md:border-r md:border-sapo-gold/20 last:border-0"
             >
-              <span className="font-display text-5xl md:text-6xl font-black text-sapo-gold mb-2 leading-none">
+              <span className="font-display text-4xl md:text-6xl font-black text-sapo-gold mb-2 leading-none">
                 <CountUp value={stat.value} suffix={stat.suffix} trigger={isInView} />
               </span>
               <span className="text-sapo-cream/60 text-xs font-sans font-medium tracking-[0.2em] uppercase">

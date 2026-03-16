@@ -7,6 +7,10 @@
     scroll-behavior: smooth;
   }
 
+  html, body {
+    overflow-x: hidden;
+  }
+
   body {
     @apply bg-sapo-dark text-sapo-cream font-sans;
     margin: 0;

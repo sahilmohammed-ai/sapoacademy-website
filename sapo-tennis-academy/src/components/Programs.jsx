@@ -38,7 +38,7 @@ export default function Programs() {
   const { ref, controls } = useScrollAnimation()
 
   return (
-    <section id="programs" className="py-28 lg:py-36 px-6 bg-sapo-dark">
+    <section id="programs" className="py-20 lg:py-36 px-4 sm:px-6 bg-sapo-dark">
       <div className="max-w-7xl mx-auto">
 
         {/* Header */}
@@ -57,7 +57,7 @@ export default function Programs() {
           </motion.div>
           <motion.h2
             variants={staggerItem}
-            className="font-display text-5xl md:text-6xl lg:text-7xl font-black text-sapo-cream leading-tight"
+            className="font-display text-4xl md:text-6xl lg:text-7xl font-black text-sapo-cream leading-tight"
           >
             Simple,
             <br />
@@ -86,7 +86,7 @@ export default function Programs() {
               transition={{ duration: 0.3 }}
               className={`relative flex flex-col p-8 border transition-all duration-300 group ${
                 plan.featured
-                  ? 'border-sapo-gold/50 bg-sapo-green/30 md:scale-105'
+                  ? 'border-sapo-gold/50 bg-sapo-green/30 lg:scale-105'
                   : 'border-sapo-cream/10 bg-sapo-green/15 hover:border-sapo-gold/40 hover:bg-sapo-green/25'
               }`}
             >
@@ -122,7 +122,7 @@ export default function Programs() {
                 href={plan.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`inline-flex items-center justify-center gap-2 py-3.5 px-6 font-sans font-semibold text-sm tracking-widest uppercase transition-all duration-300 ${
+                className={`inline-flex items-center justify-center gap-2 py-3.5 px-6 min-h-[44px] font-sans font-semibold text-sm tracking-widest uppercase transition-all duration-300 ${
                   plan.featured
                     ? 'bg-sapo-gold text-sapo-dark hover:bg-sapo-cream'
                     : 'border border-sapo-gold text-sapo-gold hover:bg-sapo-gold hover:text-sapo-dark'
