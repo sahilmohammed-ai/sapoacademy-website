@@ -85,7 +85,7 @@ export default function Gallery() {
   }
 
   return (
-    <section id="gallery" className="py-20 lg:py-36 bg-sapo-dark overflow-hidden relative z-10">
+    <section id="gallery" className="pt-20 pb-8 lg:py-36 bg-sapo-dark overflow-hidden relative z-10">
       <div className="gold-divider mb-12 lg:mb-24" />
 
       {/* Header */}
@@ -136,7 +136,7 @@ export default function Gallery() {
       </div>
 
       {/* Instagram CTA */}
-      <div className="px-4 sm:px-6 max-w-7xl mx-auto mt-12 flex items-center gap-3 flex-wrap">
+      <div className="px-4 sm:px-6 max-w-7xl mx-auto mt-6 flex items-center gap-3 flex-wrap">
         <div className="w-8 h-px bg-sapo-gold/40 shrink-0" />
         <a
           href="https://www.instagram.com/sapoacademy"
