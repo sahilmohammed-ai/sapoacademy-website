@@ -24,9 +24,8 @@ const mediaItems = [
 function VideoTile({ src, onClick }) {
   return (
     <div
-      className="relative w-full overflow-hidden cursor-pointer group bg-sapo-green/30 mb-3 break-inside-avoid"
+      className="relative w-full overflow-hidden cursor-pointer group bg-sapo-green/30 mb-3 break-inside-avoid aspect-[3/4] sm:aspect-[9/16]"
       onClick={onClick}
-      style={{ aspectRatio: '9/16' }}
     >
       <video
         src={`${src}#t=0.001`}
@@ -87,7 +86,7 @@ export default function Gallery() {
 
   return (
     <section id="gallery" className="py-20 lg:py-36 bg-sapo-dark">
-      <div className="gold-divider mb-24" />
+      <div className="gold-divider mb-12 lg:mb-24" />
 
       {/* Header */}
       <motion.div
