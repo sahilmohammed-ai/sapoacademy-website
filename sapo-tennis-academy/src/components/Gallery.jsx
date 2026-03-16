@@ -24,7 +24,7 @@ const mediaItems = [
 function VideoTile({ src, onClick }) {
   return (
     <div
-      className="relative w-full overflow-hidden cursor-pointer group bg-sapo-green/30 mb-3 break-inside-avoid aspect-[3/4] sm:aspect-[9/16]"
+      className="relative w-full overflow-hidden cursor-pointer group bg-sapo-green/30 aspect-square"
       onClick={onClick}
     >
       <video
@@ -52,13 +52,13 @@ function VideoTile({ src, onClick }) {
 function PhotoTile({ src, onClick }) {
   return (
     <div
-      className="relative w-full overflow-hidden cursor-pointer group mb-3 break-inside-avoid"
+      className="relative w-full overflow-hidden cursor-pointer group aspect-square"
       onClick={onClick}
     >
       <img
         src={src}
         alt="Sapo Tennis Academy"
-        className="w-full h-auto block transition-transform duration-500 group-hover:scale-105"
+        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
         loading="lazy"
       />
       <div className="absolute inset-0 bg-sapo-dark/0 group-hover:bg-sapo-dark/10 transition-colors duration-300" />
@@ -112,11 +112,9 @@ export default function Gallery() {
         </motion.h2>
       </motion.div>
 
-      {/* Masonry collage */}
+      {/* Grid gallery */}
       <div className="px-4 sm:px-6 max-w-7xl mx-auto">
-        <div
-          className="columns-2 sm:columns-3 lg:columns-4 gap-3"
-        >
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
           {mediaItems.map((item, i) => (
             <motion.div
               key={i}
