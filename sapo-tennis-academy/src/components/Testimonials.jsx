@@ -6,26 +6,55 @@ import { useScrollAnimation, containerVariants, staggerItem } from '../hooks/use
 const fallbackTestimonials = [
   {
     id: 1,
-    quote: "Coach Sapo completely transformed my game. In six months I went from a complete beginner who couldn't rally to playing in my first USTA tournament. His patience and attention to detail are unmatched.",
-    name: 'Maria G.',
-    level: 'Intermediate Player',
+    quote: "My children have been training with Coach Mark for over 5 years now, and I couldn't be happier with the experience. He is incredibly dedicated to his students and takes the time to ensure they learn proper technique while having fun. His positive attitude and engaging teaching style make every session enjoyable, and my kids look forward to practice every week.",
+    name: 'Divya Chundru',
+    level: 'Parent',
   },
   {
     id: 2,
-    quote: "My son has been training with Coach Sapo since he was 9. Now at 14, he's ranked in the top 20 for his age group in Texas. The technical foundation and mental toughness Coach instills are remarkable.",
-    name: 'Robert T.',
-    level: 'Parent of Competitive Player',
+    quote: "Excellent coaching and prep for tennis team and tournaments! Both kids love the lessons and as a parent I can see their progress and growth. Coach Mark tailors his coaching to each child's potential and learning style. He knows when to push his students and how to push them to the next level. Can't recommend him enough!",
+    name: 'Olivia WildCraft',
+    level: 'Parent',
   },
   {
     id: 3,
-    quote: "I started tennis at 45, convinced I was too old to learn. Coach Sapo proved me completely wrong. His beginner program is structured perfectly — challenging enough to keep you progressing, fun enough to keep you coming back.",
-    name: 'Linda K.',
+    quote: "Coach Mark Sapo is an excellent coach! I took his lessons as a Sophomore at Shadow Creek High School. He taught me the foundation and basics of Tennis in an unforgettable way. I highly recommend and trust his expertise.",
+    name: 'Mj Tolentino',
+    level: 'High School Player',
+  },
+  {
+    id: 4,
+    quote: "As a beginner his lessons are well put together to have fun and strict enough for me to learn. I did see a drastic improvement on my tennis skills and will definitely recommend my friends to join. I highly recommend it for all skill levels too.",
+    name: 'Erik Esparza',
     level: 'Adult Beginner',
+  },
+  {
+    id: 5,
+    quote: "We love Coach Mark! He not only focuses on improving skills and technique with my 9 year old son but also makes the sessions fun and engaging. My son always looks forward to practice. We truly appreciate the coach's patience and ability to connect.",
+    name: 'Sonal Parikh',
+    level: 'Parent',
+  },
+  {
+    id: 6,
+    quote: "Sapo Tennis Academy does an excellent job of instilling good technique into beginners, providing practice opportunities, and refining players' game! I highly recommend to anyone looking to improve or start their tennis journey!",
+    name: 'Michelle Truong',
+    level: 'Player',
+  },
+  {
+    id: 7,
+    quote: "Mark's a great tennis coach! He's engaged during lessons and really cares about his students. My son has learned a lot and looks forward to practice.",
+    name: 'Ram Parikh',
+    level: 'Parent',
   },
 ]
 
+function shuffleAndPick(arr, count) {
+  const shuffled = [...arr].sort(() => Math.random() - 0.5)
+  return shuffled.slice(0, count)
+}
+
 export default function Testimonials() {
-  const [testimonials, setTestimonials] = useState(fallbackTestimonials)
+  const [testimonials, setTestimonials] = useState(() => shuffleAndPick(fallbackTestimonials, 3))
   const { ref, controls } = useScrollAnimation(0.1)
 
   useEffect(() => {
@@ -76,17 +105,16 @@ export default function Testimonials() {
           </motion.h2>
         </motion.div>
 
-        {/* Cards — horizontal scroll on mobile */}
-        <div className="flex flex-col md:flex-row gap-6 md:overflow-visible md:grid md:grid-cols-3 pb-4 md:pb-0">
+        {/* Cards — horizontal scroll */}
+        <div className="flex gap-6 overflow-x-auto pb-6 snap-x snap-mandatory scrollbar-hide">
           {testimonials.map((t, i) => (
             <motion.div
               key={t.id}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: i * 0.15, ease: [0.25, 0.1, 0.25, 1] }}
+              transition={{ duration: 0.6, delay: Math.min(i * 0.1, 0.4), ease: [0.25, 0.1, 0.25, 1] }}
               viewport={{ once: true }}
-              whileHover={{ y: -4 }}
-              className="w-full md:w-auto bg-sapo-dark/80 border border-sapo-cream/10 hover:border-sapo-gold/30 p-6 sm:p-8 flex flex-col transition-all duration-300"
+              className="flex-shrink-0 w-[85vw] sm:w-[70vw] md:w-[calc(33.333%-1rem)] snap-start bg-sapo-dark/80 border border-sapo-cream/10 hover:border-sapo-gold/30 p-6 sm:p-8 flex flex-col transition-all duration-300"
               style={{ backdropFilter: 'blur(8px)' }}
             >
               {/* Stars */}

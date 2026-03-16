@@ -24,12 +24,12 @@ const mediaItems = [
 function VideoTile({ src, onClick }) {
   return (
     <div
-      className="relative w-full overflow-hidden cursor-pointer group bg-sapo-dark mb-3 break-inside-avoid"
+      className="relative w-full overflow-hidden cursor-pointer group bg-sapo-green/30 mb-3 break-inside-avoid"
       onClick={onClick}
       style={{ aspectRatio: '9/16' }}
     >
       <video
-        src={src}
+        src={`${src}#t=0.001`}
         className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
         muted
         playsInline
@@ -137,20 +137,20 @@ export default function Gallery() {
       </div>
 
       {/* Instagram CTA */}
-      <div className="px-4 sm:px-6 max-w-7xl mx-auto mt-12 flex items-center gap-4">
-        <div className="w-8 h-px bg-sapo-gold/40" />
+      <div className="px-4 sm:px-6 max-w-7xl mx-auto mt-12 flex items-center gap-3 flex-wrap">
+        <div className="w-8 h-px bg-sapo-gold/40 shrink-0" />
         <a
           href="https://www.instagram.com/sapoacademy"
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center gap-2 text-sapo-cream/50 hover:text-sapo-gold transition-colors duration-300 text-sm font-sans"
+          className="inline-flex items-center gap-2 text-sapo-cream/50 hover:text-sapo-gold transition-colors duration-300 text-sm font-sans min-h-[44px]"
         >
-          <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <svg className="w-4 h-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <rect x="2" y="2" width="20" height="20" rx="5" ry="5" strokeWidth={1.5}/>
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/>
             <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" strokeWidth={2} strokeLinecap="round"/>
           </svg>
-          Follow @sapoacademy for more
+          <span>Follow @sapoacademy for more</span>
         </a>
       </div>
 

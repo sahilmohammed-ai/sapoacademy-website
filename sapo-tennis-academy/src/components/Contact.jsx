@@ -85,7 +85,7 @@ export default function Contact() {
           </motion.h2>
           <motion.p
             variants={staggerItem}
-            className="text-sapo-cream/55 font-sans text-base leading-relaxed max-w-md mx-auto"
+            className="text-white font-sans text-lg font-bold leading-relaxed max-w-md mx-auto"
           >
             Reach out directly to Coach Mark to schedule a session or ask any questions.
           </motion.p>
