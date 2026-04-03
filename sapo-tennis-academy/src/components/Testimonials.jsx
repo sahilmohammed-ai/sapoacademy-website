@@ -13,7 +13,7 @@ const fallbackTestimonials = [
   {
     id: 2,
     quote: "Excellent coaching and prep for tennis team and tournaments! Both kids love the lessons and as a parent I can see their progress and growth. Coach Mark tailors his coaching to each child's potential and learning style. He knows when to push his students and how to push them to the next level. Can't recommend him enough!",
-    name: 'Olivia WildCraft',
+    name: 'Olivia Sieffers',
     level: 'Parent',
   },
   {
@@ -38,7 +38,7 @@ const fallbackTestimonials = [
     id: 6,
     quote: "Sapo Tennis Academy does an excellent job of instilling good technique into beginners, providing practice opportunities, and refining players' game! I highly recommend to anyone looking to improve or start their tennis journey!",
     name: 'Michelle Truong',
-    level: 'Player',
+    level: 'High School Player',
   },
   {
     id: 7,

@@ -3,6 +3,7 @@ import Hero from './components/Hero'
 import Stats from './components/Stats'
 import Programs from './components/Programs'
 import About from './components/About'
+import Newsletter from './components/Newsletter'
 import Gallery from './components/Gallery'
 import Testimonials from './components/Testimonials'
 import Contact from './components/Contact'
@@ -16,6 +17,7 @@ export default function App() {
       <Stats />
       <Programs />
       <About />
+      <Newsletter />
       <Gallery />
       <Testimonials />
       <Contact />

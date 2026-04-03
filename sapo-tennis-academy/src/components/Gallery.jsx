@@ -1,25 +1,64 @@
-import { useState } from 'react'
+import { useState, useMemo } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useScrollAnimation, containerVariants, staggerItem } from '../hooks/useScrollAnimation'
 
-// Curated selection — skips near-duplicate sequential shots, spreads videos evenly
-const mediaItems = [
-  { type: 'photo', src: '/media/IMG_9622.JPG' },
-  { type: 'video', src: '/media/IMG_9583.MP4' },
-  { type: 'photo', src: '/media/IMG_0196.JPG' },
-  { type: 'video', src: '/media/IMG_9623.MP4' },
+// Full pool — add new files here as they're dropped into /public/media/
+const allMedia = [
+  { type: 'photo', src: '/media/IMG_9266.JPG' },
+  { type: 'photo', src: '/media/IMG_9267.JPG' },
+  { type: 'photo', src: '/media/IMG_9268.JPG' },
+  { type: 'photo', src: '/media/IMG_9269.JPG' },
+  { type: 'photo', src: '/media/IMG_9270.JPG' },
+  { type: 'photo', src: '/media/IMG_9271.JPG' },
+  { type: 'photo', src: '/media/IMG_9272.JPG' },
+  { type: 'photo', src: '/media/IMG_9273.JPG' },
+  { type: 'photo', src: '/media/IMG_9274.JPG' },
   { type: 'photo', src: '/media/IMG_9579.JPG' },
+  { type: 'photo', src: '/media/IMG_9580.JPG' },
+  { type: 'photo', src: '/media/IMG_9581.JPG' },
+  { type: 'photo', src: '/media/IMG_9582.JPG' },
+  { type: 'photo', src: '/media/IMG_9622.JPG' },
+  { type: 'photo', src: '/media/IMG_9624.JPG' },
+  { type: 'photo', src: '/media/IMG_9625.JPG' },
+  { type: 'photo', src: '/media/IMG_0196.JPG' },
+  { type: 'photo', src: '/media/IMG_0197.JPG' },
   { type: 'photo', src: '/media/IMG_0198.JPG' },
   { type: 'video', src: '/media/IMG_9416.MP4' },
-  { type: 'photo', src: '/media/IMG_9582.JPG' },
-  { type: 'video', src: '/media/IMG_0189.MP4' },
-  { type: 'photo', src: '/media/IMG_9272.JPG' },
-  { type: 'photo', src: '/media/IMG_9624.JPG' },
-  { type: 'video', src: '/media/IMG_0215.MP4' },
-  { type: 'photo', src: '/media/IMG_9581.JPG' },
   { type: 'video', src: '/media/IMG_9417.MP4' },
-  { type: 'photo', src: '/media/IMG_0197.JPG' },
+  { type: 'video', src: '/media/IMG_9583.MP4' },
+  { type: 'video', src: '/media/IMG_9623.MP4' },
+  { type: 'video', src: '/media/IMG_0189.MP4' },
+  { type: 'video', src: '/media/IMG_0190.MP4' },
+  { type: 'video', src: '/media/IMG_0191.MP4' },
+  { type: 'video', src: '/media/IMG_0192.MP4' },
+  { type: 'video', src: '/media/IMG_0193.MP4' },
+  { type: 'video', src: '/media/IMG_0194.MP4' },
+  { type: 'video', src: '/media/IMG_0195.MP4' },
+  { type: 'video', src: '/media/IMG_0212.MP4' },
+  { type: 'video', src: '/media/IMG_0215.MP4' },
+  { type: 'video', src: '/media/IMG_0216.MP4' },
+  { type: 'video', src: '/media/D82FC7DA-E896-4D62-A9D5-143096740112.MP4' },
+  { type: 'photo', src: '/media/IMG_0529.JPG' },
+  { type: 'photo', src: '/media/IMG_1352.JPG' },
+  { type: 'photo', src: '/media/IMG_2206.JPG' },
+  { type: 'photo', src: '/media/IMG_2208.JPG' },
+  { type: 'photo', src: '/media/IMG_2210.JPG' },
+  { type: 'photo', src: '/media/IMG_2839.JPG' },
+  { type: 'photo', src: '/media/IMG_4118.JPG' },
+  { type: 'photo', src: '/media/image.JPG' },
+  { type: 'photo', src: '/media/Sapo - 2.JPG' },
+  { type: 'video', src: '/media/IMG_1283 2.MP4' },
+  { type: 'video', src: '/media/IMG_1289 2.MP4' },
+  { type: 'video', src: '/media/IMG_1304 2.MP4' },
+  { type: 'video', src: '/media/IMG_1309 2.MP4' },
+  { type: 'photo', src: '/media/IMG_1323 2.JPG' },
+  { type: 'photo', src: '/media/IMG_1341 2.JPG' },
 ]
+
+function pickRandom16(pool) {
+  const shuffled = [...pool].sort(() => Math.random() - 0.5)
+  return shuffled.slice(0, 16)
+}
 
 function VideoTile({ src, onClick }) {
   return (
@@ -76,6 +115,7 @@ function PhotoTile({ src, onClick }) {
 export default function Gallery() {
   const { ref, controls } = useScrollAnimation(0.1)
   const [lightbox, setLightbox] = useState(null)
+  const mediaItems = useMemo(() => pickRandom16(allMedia), [])
 
   const open = (item, index) => setLightbox({ ...item, index })
   const close = () => setLightbox(null)
