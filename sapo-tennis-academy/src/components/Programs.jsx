@@ -38,7 +38,7 @@ export default function Programs() {
   const { ref, controls } = useScrollAnimation()
 
   return (
-    <section id="programs" className="py-20 lg:py-36 px-4 sm:px-6 bg-sapo-dark">
+    <section id="programs" className="pt-20 pb-0 lg:pt-36 px-4 sm:px-6 bg-sapo-dark">
       <div className="max-w-7xl mx-auto">
 
         {/* Header */}
@@ -143,7 +143,7 @@ export default function Programs() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
           viewport={{ once: true }}
-          className="mt-20 relative h-64 md:h-80 overflow-hidden"
+          className="mt-20 relative h-64 md:h-80 overflow-hidden mb-0"
         >
           <img
             src="/images/training-session.jpg"

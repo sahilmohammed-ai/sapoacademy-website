@@ -125,8 +125,8 @@ export default function Gallery() {
   }
 
   return (
-    <section id="gallery" className="pt-20 pb-8 lg:py-36 bg-sapo-dark overflow-hidden relative z-10">
-      <div className="gold-divider mb-12 lg:mb-24" />
+    <section id="gallery" className="pb-8 lg:pb-36 bg-sapo-dark overflow-hidden relative z-10">
+      <div className="gold-divider mb-12 lg:mb-16" />
 
       {/* Header */}
       <motion.div

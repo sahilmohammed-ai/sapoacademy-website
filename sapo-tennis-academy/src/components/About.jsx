@@ -11,7 +11,7 @@ export default function About() {
   const { ref, controls } = useScrollAnimation(0.1)
 
   return (
-    <section id="about" className="py-20 lg:py-36 px-4 sm:px-6 bg-sapo-dark overflow-hidden">
+    <section id="about" className="pt-20 pb-10 lg:pt-36 lg:pb-16 px-4 sm:px-6 bg-sapo-dark overflow-hidden">
       <div className="gold-divider mb-24" />
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center">

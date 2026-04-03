@@ -20,7 +20,7 @@ export default function Newsletter() {
   const { ref, controls } = useScrollAnimation(0.1)
 
   return (
-    <section id="updates" className="pt-20 pb-24 lg:pb-36 bg-sapo-dark relative">
+    <section id="updates" className="pt-20 pb-16 bg-sapo-dark relative">
       <div className="gold-divider mb-12 lg:mb-20" />
       {/* Subtle background texture */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,_#1a3a2a33_0%,_transparent_60%)]" />
