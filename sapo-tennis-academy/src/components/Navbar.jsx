@@ -33,13 +33,12 @@ export default function Navbar() {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 h-20 flex items-center justify-between">
           {/* Logo */}
-          <a href="#home" className="flex flex-col leading-none group">
-            <span className="font-display text-2xl font-black text-sapo-cream tracking-wider group-hover:text-sapo-gold transition-colors duration-300">
-              SAPO
-            </span>
-            <span className="text-[10px] font-sans font-light tracking-[0.25em] text-sapo-gold uppercase">
-              Tennis Academy
-            </span>
+          <a href="#home">
+            <img
+              src="/images/full_logo.png"
+              alt="Sapo Tennis Academy"
+              className="w-44 block -translate-y-[20px] -translate-x-[20px]"
+            />
           </a>
 
           {/* Desktop nav */}
