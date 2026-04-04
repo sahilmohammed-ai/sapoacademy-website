@@ -1,4 +1,4 @@
-import { useState, useMemo } from 'react'
+import { useState, useMemo, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useScrollAnimation, containerVariants, staggerItem } from '../hooks/useScrollAnimation'
 
@@ -111,6 +111,13 @@ export default function Gallery() {
 
   const open = (item, index) => setLightbox({ ...item, index })
   const close = () => setLightbox(null)
+
+  useEffect(() => {
+    const onKey = (e) => { if (e.key === 'Escape') close() }
+    window.addEventListener('keydown', onKey)
+    return () => window.removeEventListener('keydown', onKey)
+  }, [])
+
   const nav = (dir) => {
     const next = (lightbox.index + dir + mediaItems.length) % mediaItems.length
     setLightbox({ ...mediaItems[next], index: next })
@@ -196,10 +203,10 @@ export default function Gallery() {
           >
             <button
               onClick={close}
-              className="absolute top-5 right-5 w-11 h-11 border border-sapo-cream/20 flex items-center justify-center text-sapo-cream/60 hover:text-sapo-cream hover:border-sapo-cream/40 transition-all duration-200"
+              className="absolute top-4 right-4 w-14 h-14 bg-sapo-dark/80 border border-sapo-cream/30 flex items-center justify-center text-sapo-cream hover:bg-sapo-gold hover:border-sapo-gold hover:text-sapo-dark transition-all duration-200 z-10"
             >
-              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M6 18L18 6M6 6l12 12" />
+              <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
               </svg>
             </button>
 
@@ -217,21 +224,22 @@ export default function Gallery() {
               initial={{ opacity: 0, scale: 0.96 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.18 }}
-              className="max-w-4xl max-h-[88vh] w-full flex items-center justify-center"
-              onClick={(e) => e.stopPropagation()}
+              className="flex items-center justify-center"
             >
               {lightbox.type === 'video' ? (
                 <video
                   src={lightbox.src}
-                  className="max-h-[88vh] max-w-full object-contain"
+                  className="max-h-[88vh] max-w-[90vw] object-contain"
                   controls
                   autoPlay
+                  onClick={(e) => e.stopPropagation()}
                 />
               ) : (
                 <img
                   src={lightbox.src}
                   alt="Sapo Tennis Academy"
-                  className="max-h-[88vh] max-w-full object-contain"
+                  className="max-h-[88vh] max-w-[90vw] object-contain"
+                  onClick={(e) => e.stopPropagation()}
                 />
               )}
             </motion.div>
