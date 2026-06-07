@@ -67,7 +67,7 @@ export default function Programs() {
             variants={staggerItem}
             className="text-sapo-cream/50 font-sans text-base mt-6 max-w-lg leading-relaxed"
           >
-            All lessons are one-on-one with Coach Mark. Pick the package that fits your schedule and goals.
+            Pick the package that fits your schedule and goals.
           </motion.p>
         </motion.div>
 
@@ -135,6 +135,32 @@ export default function Programs() {
               </a>
             </motion.div>
           ))}
+        </motion.div>
+
+        {/* Group lessons callout */}
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] }}
+          viewport={{ once: true }}
+          className="mt-8 lg:mt-10 flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 p-6 sm:p-8 border border-sapo-gold/20 bg-sapo-green/10"
+        >
+          <div className="text-sapo-gold shrink-0">
+            <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 20h5v-2a4 4 0 00-3-3.87M9 20H4v-2a4 4 0 013-3.87m6-1.13a4 4 0 100-8 4 4 0 000 8zm6 0a4 4 0 10-8 0" />
+            </svg>
+          </div>
+          <div>
+            <p className="text-sapo-gold text-xs tracking-[0.25em] uppercase font-sans font-semibold mb-2">
+              Also Offering
+            </p>
+            <p className="font-display text-xl md:text-2xl font-bold text-sapo-cream mb-2">
+              Group Lessons
+            </p>
+            <p className="text-sapo-cream/60 text-sm font-sans leading-relaxed max-w-2xl">
+              Train alongside other players at your skill level — group lessons give kids more chances to play, compete, and grow together on the court. Contact Coach Mark to learn more and find the right group for you.
+            </p>
+          </div>
         </motion.div>
 
         {/* Bottom image strip */}

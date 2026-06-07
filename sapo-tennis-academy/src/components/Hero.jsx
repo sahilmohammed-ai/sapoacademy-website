@@ -132,6 +132,22 @@ export default function Hero() {
             Meet the Coach
           </a>
         </motion.div>
+
+        {/* Discount banner */}
+        <motion.div
+          custom={1.3}
+          variants={fadeIn}
+          initial="hidden"
+          animate="visible"
+          className="mt-8 inline-flex items-start sm:items-center gap-3 sm:gap-4 px-5 py-4 max-w-xl border border-sapo-gold/50 bg-sapo-gold/10 backdrop-blur-sm"
+        >
+          <svg className="w-6 h-6 text-sapo-gold shrink-0 mt-0.5 sm:mt-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M7 7h.01M7 3h5.586a1 1 0 01.707.293l6.414 6.414a1 1 0 010 1.414l-7.586 7.586a1 1 0 01-1.414 0L4.293 12.293A1 1 0 014 11.586V6a3 3 0 013-3z" />
+          </svg>
+          <p className="text-sapo-cream text-sm sm:text-base font-sans leading-snug">
+            <span className="text-sapo-gold font-bold uppercase tracking-wide">Discounts available</span> for SCHS varsity, JV, and freshman players, plus siblings. Contact Coach Mark for more info.
+          </p>
+        </motion.div>
       </div>
 
       {/* Scroll indicator */}

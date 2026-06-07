@@ -2,6 +2,7 @@ import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import Stats from './components/Stats'
 import Programs from './components/Programs'
+import SummerCamp from './components/SummerCamp'
 import About from './components/About'
 import Newsletter from './components/Newsletter'
 import Gallery from './components/Gallery'
@@ -16,6 +17,7 @@ export default function App() {
       <Hero />
       <Stats />
       <Programs />
+      <SummerCamp />
       <About />
       <Newsletter />
       <Gallery />

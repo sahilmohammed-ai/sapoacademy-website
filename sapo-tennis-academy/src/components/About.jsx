@@ -3,7 +3,7 @@ import { useScrollAnimation, containerVariants, staggerItem } from '../hooks/use
 
 const highlights = [
   { label: 'Philosophy', detail: 'Discipline, joy, and the long game. Tennis as a life skill.' },
-  { label: 'Experience', detail: '10+ years developing players of all ages in Pearland' },
+  { label: 'Our Team', detail: 'A big team of coaches with great experience developing players of all ages in Pearland' },
   { label: 'Specialties', detail: 'Junior development, adult beginners, tournament preparation' },
 ]
 
@@ -65,7 +65,7 @@ export default function About() {
             <motion.div variants={staggerItem} className="flex items-center gap-3 mb-6">
               <div className="w-8 h-px bg-sapo-gold" />
               <span className="text-sapo-gold text-xs font-sans font-medium tracking-[0.3em] uppercase">
-                The Coach
+                The Team
               </span>
             </motion.div>
 
@@ -92,13 +92,13 @@ export default function About() {
               variants={staggerItem}
               className="text-sapo-cream/65 font-sans text-base leading-relaxed mb-4"
             >
-              Coach Mark has been shaping tennis players in the Pearland area for over a decade. His approach goes beyond technique. He believes tennis teaches patience, resilience, and confidence that extend far beyond the baseline.
+              Led by Coach Mark, Sapo Tennis Academy has grown into a big team of coaches with great experience shaping tennis players across the Pearland area. Their approach goes beyond technique. They believe tennis teaches patience, resilience, and confidence that extend far beyond the baseline.
             </motion.p>
             <motion.p
               variants={staggerItem}
               className="text-sapo-cream/65 font-sans text-base leading-relaxed mb-10"
             >
-              Whether you're picking up a racket for the first time or preparing for your next tournament, Coach Mark meets you exactly where you are and builds a clear path forward.
+              Whether you're picking up a racket for the first time or preparing for your next tournament, our coaches meet you exactly where you are and build a clear path forward together.
             </motion.p>
 
             {/* Highlights grid */}
