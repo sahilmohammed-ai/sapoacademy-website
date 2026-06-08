@@ -74,7 +74,7 @@ function ScrollablePost({ post }) {
           </span>
         </div>
 
-        {/* Dot indicators — one per pair */}
+        {/* Dot indicators, one per pair */}
         <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-20">
           {Array.from({ length: Math.ceil(total / 2) }).map((_, i) => (
             <button

@@ -2,7 +2,7 @@ import { motion } from 'framer-motion'
 import { useScrollAnimation, containerVariants, staggerItem } from '../hooks/useScrollAnimation'
 import WeekGallery from './WeekGallery'
 
-// Camp photos/videos by week — drop new files into /public/media/summer-camp/
+// Camp photos/videos by week, drop new files into /public/media/summer-camp/
 // and add a new { label, items } entry here as each week wraps up.
 const campWeeks = [
   {
@@ -168,7 +168,7 @@ export default function SummerCamp() {
 
         </div>
 
-        {/* Camp media — by week */}
+        {/* Camp media, by week */}
         {campWeeks.length > 0 && (
           <div className="mt-20 lg:mt-28 flex flex-col gap-16">
             <motion.div

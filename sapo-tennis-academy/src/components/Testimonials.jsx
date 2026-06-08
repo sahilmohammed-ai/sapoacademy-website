@@ -105,7 +105,7 @@ export default function Testimonials() {
           </motion.h2>
         </motion.div>
 
-        {/* Cards — horizontal scroll */}
+        {/* Cards, horizontal scroll */}
         <div className="flex gap-6 overflow-x-auto pb-6 snap-x snap-mandatory scrollbar-hide">
           {testimonials.map((t, i) => (
             <motion.div

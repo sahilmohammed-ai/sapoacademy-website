@@ -158,7 +158,7 @@ export default function Programs() {
               Group Lessons
             </p>
             <p className="text-sapo-cream/60 text-sm font-sans leading-relaxed max-w-2xl">
-              Train alongside other players at your skill level — group lessons give kids more chances to play, compete, and grow together on the court. Contact Coach Mark to learn more and find the right group for you.
+              Train alongside other players at your skill level. Group lessons give kids more chances to play, compete, and grow together on the court. Contact Coach Mark to learn more and find the right group for you.
             </p>
           </div>
         </motion.div>

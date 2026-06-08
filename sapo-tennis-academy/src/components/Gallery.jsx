@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 import { useScrollAnimation, containerVariants, staggerItem } from '../hooks/useScrollAnimation'
 import MediaGallery, { pickRandom } from './MediaGallery'
 
-// Full pool — add new files here as they're dropped into /public/media/
+// Full pool, add new files here as they're dropped into /public/media/
 const allMedia = [
   { type: 'photo', src: '/media/IMG_9266.JPG' },
   { type: 'photo', src: '/media/IMG_9267.JPG' },

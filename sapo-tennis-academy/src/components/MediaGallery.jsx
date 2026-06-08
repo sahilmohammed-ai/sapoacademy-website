@@ -64,7 +64,7 @@ export function MediaTile({ item, onClick }) {
     : <PhotoTile src={item.src} onClick={onClick} />
 }
 
-// Shared lightbox — pass the full item list plus the currently-open { ...item, index } or null
+// Shared lightbox: pass the full item list plus the currently-open { ...item, index } or null
 export function MediaLightbox({ items, lightbox, onClose, onNav }) {
   useEffect(() => {
     if (!lightbox) return
