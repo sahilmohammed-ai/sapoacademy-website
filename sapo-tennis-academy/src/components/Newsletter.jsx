@@ -51,7 +51,7 @@ function ScrollablePost({ post }) {
     <div className="group relative bg-sapo-dark border border-sapo-gold/10 hover:border-sapo-gold/30 transition-colors duration-500 overflow-hidden">
 
       {/* Two photos side by side, each same size as original single photo */}
-      <div className="relative overflow-hidden aspect-[8/3]">
+      <div className="relative overflow-hidden aspect-[16/9]">
         <AnimatePresence initial={false} custom={dir} mode="wait">
           <motion.div
             key={current}
