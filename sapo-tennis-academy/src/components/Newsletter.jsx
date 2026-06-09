@@ -91,23 +91,27 @@ function ScrollablePost({ post }) {
           ))}
         </div>
 
-        {/* Prev / Next arrows */}
-        <button
-          onClick={prev}
-          className="absolute left-3 top-1/2 -translate-y-1/2 w-9 h-9 bg-sapo-dark/60 border border-sapo-cream/20 flex items-center justify-center text-sapo-cream/70 hover:text-sapo-cream hover:border-sapo-cream/50 transition-all duration-200 z-20"
-        >
-          <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-          </svg>
-        </button>
-        <button
-          onClick={next}
-          className="absolute right-3 top-1/2 -translate-y-1/2 w-9 h-9 bg-sapo-dark/60 border border-sapo-cream/20 flex items-center justify-center text-sapo-cream/70 hover:text-sapo-cream hover:border-sapo-cream/50 transition-all duration-200 z-20"
-        >
-          <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-          </svg>
-        </button>
+        {/* Prev / Next arrows - only show if multiple pairs exist */}
+        {Math.ceil(total / 2) > 1 && (
+          <>
+            <button
+              onClick={prev}
+              className="absolute left-3 top-1/2 -translate-y-1/2 w-9 h-9 bg-sapo-dark/60 border border-sapo-cream/20 flex items-center justify-center text-sapo-cream/70 hover:text-sapo-cream hover:border-sapo-cream/50 transition-all duration-200 z-20"
+            >
+              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+              </svg>
+            </button>
+            <button
+              onClick={next}
+              className="absolute right-3 top-1/2 -translate-y-1/2 w-9 h-9 bg-sapo-dark/60 border border-sapo-cream/20 flex items-center justify-center text-sapo-cream/70 hover:text-sapo-cream hover:border-sapo-cream/50 transition-all duration-200 z-20"
+            >
+              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
+          </>
+        )}
 
         {/* Counter */}
         <div className="absolute top-4 right-4 z-20 text-sapo-cream/50 text-[10px] font-sans tracking-widest">
