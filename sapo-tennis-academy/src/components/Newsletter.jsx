@@ -3,18 +3,22 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { useScrollAnimation, containerVariants, staggerItem } from '../hooks/useScrollAnimation'
 
 const currentPost = {
-  title: 'SCHS Tennis Banquet',
-  date: 'April 11, 2026',
-  caption: "Sapo Tennis Academy is proud to celebrate our players' tennis journies at the 2026 SCHS Tennis Banquet! Also, shoutout to our seniors! We are so proud of all your dedication and wish y'all good luck in your own endeavors!!",
+  title: 'King Daddy Level 6 Tournament',
+  date: 'May 30-31, 2026',
+  caption: "Huge congratulations to Jake Rojas and Aarav Patel for their outstanding performances at the King Daddy Level 6 Tournament! Jake took 1st place and Aarav took 2nd in the competitive 16 U Boys division. We are so proud of your hard work and dedication!",
   images: [
-    '/images/newsletter/banquet-1.jpg',
-    '/images/newsletter/banquet-2.jpg',
-    '/images/newsletter/banquet-3.jpg',
-    '/images/newsletter/banquet-4.jpg',
+    '/images/newsletter/may-L6-1.jpg',
+    '/images/newsletter/may-L6-2.jpg',
   ],
 }
 
 const pastPosts = [
+  {
+    image: '/images/newsletter/banquet-1.jpg',
+    date: 'April 11, 2026',
+    title: 'SCHS Tennis Banquet',
+    caption: "Sapo Tennis Academy is proud to celebrate our players' tennis journies at the 2026 SCHS Tennis Banquet! Also, shoutout to our seniors! We are so proud of all your dedication and wish y'all good luck in your own endeavors!!",
+  },
   {
     image: '/images/newsletter/regionals.jpeg',
     date: 'April 2, 2026',
