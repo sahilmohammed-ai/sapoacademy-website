@@ -148,24 +148,6 @@ export default function Hero() {
             <span className="text-sapo-gold font-bold uppercase tracking-wide">Discounts available</span> for SCHS varsity, JV, and freshman players, plus siblings. Contact Coach Mark for more info.
           </p>
         </motion.div>
-
-        {/* Summer Camp banner */}
-        <motion.a
-          custom={1.5}
-          variants={fadeIn}
-          initial="hidden"
-          animate="visible"
-          href="#summer-camp"
-          className="mt-4 inline-flex items-start sm:items-center gap-3 sm:gap-4 px-5 py-4 max-w-xl border border-sapo-gold/40 bg-sapo-green/20 backdrop-blur-sm hover:border-sapo-gold/60 hover:bg-sapo-green/30 transition-all duration-300 cursor-pointer"
-        >
-          <svg className="w-6 h-6 text-sapo-gold shrink-0 mt-0.5 sm:mt-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 7v12m0 0l-4-4m4 4l4-4m4-11h2a2 2 0 012 2v12a2 2 0 01-2 2h-2.5m-7.5 0H6a2 2 0 01-2-2V7a2 2 0 012-2h2.5m7 14v-4m0 0h4m-4 0h-4" />
-          </svg>
-          <div>
-            <p className="text-sapo-gold text-xs font-bold uppercase tracking-wide">New This Summer</p>
-            <p className="text-sapo-cream text-sm sm:text-base font-sans leading-snug">STA Summer Camp 2026 at Shadow Creek. Limited spots available. Learn more.</p>
-          </div>
-        </motion.a>
       </div>
 
       {/* Scroll indicator */}
